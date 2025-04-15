@@ -10,7 +10,7 @@ const DaisyPricingCard = ({pricing}) => {
          }
           <div className="flex justify-between">
             <h2 className="text-3xl font-bold">{name}</h2>
-            <span className="text-xl">${price}/mo</span>        
+            <span className="text-xl">${price}/month</span>        
           </div>
           <p>{description}</p>
           <ul className=" flex flex-col gap-2 text-xs">

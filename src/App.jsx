@@ -5,6 +5,7 @@ import DaisyNav from './Components/daisuNav/DaisyNav'
 import Navbar from './Components/Navbar/Navbar'
 import PricingCard from './Components/PricingCard/PricingOption'
 import PricingOption from './Components/PricingCard/PricingOption'
+import ResultData from './Components/RerultData/ResultData'
  
 const pricingPromice= fetch('pricingData.json')
 .then(res=>res.json())
@@ -22,6 +23,9 @@ function App() {
    <PricingOption key={pricingPromice.id} pricingPromice={pricingPromice}></PricingOption>
        </Suspense>
       </main>
+      <footer>
+        <ResultData></ResultData>
+      </footer>
 
     </>
   )
