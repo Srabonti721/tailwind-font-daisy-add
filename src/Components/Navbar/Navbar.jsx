@@ -37,18 +37,22 @@ const Navbar = () => {
         <nav className='flex justify-between items-center bg-gray-300 mx-8 hover:bg-blue-50'>
             <span className='flex' onClick={() => setOpen(!open)}>
                 {
-                    open ? <X className='md:hidden'></X> : <Menu className='md:hidden' ></Menu>
+                    open ?
+                     <X className='md:hidden'></X> : 
+                     <Menu className='md:hidden' ></Menu>
                 }
-<ul className='md:hidden'>
-{
-    links
-}
-</ul>
+                <ul className={`md:hidden absolute text-center p-2 duration-1500 text-white
+                ${open?'top-8':'-top-64'}
+                     bg-red-500 rounded-2xl`}>
+                    {
+                        links
+                    }
+                </ul>
 
                 <h1 className=' ml-4 not-last:text-xl font-medium'>My Navbar</h1>
             </span>
 
-            <ul className=' md:flex justify-center hidden'>
+            <ul className='md:flex justify-center hidden'>
                 {
                     links
                 }
