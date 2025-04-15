@@ -1,0 +1,55 @@
+[
+    {
+      "id": 1,
+      "name": "Basic Plan",
+      "price": 25,
+      "description": "Perfect for beginners who need access to essential gym equipment.",
+      "features": [
+        "Access to gym equipment",
+        "Locker room access",
+        "Free water station"
+      ],
+      "isPopular": false
+    },
+    {
+      "id": 2,
+      "name": "Standard Plan",
+      "price": 45,
+      "description": "Great for regular users looking for group classes and extended hours.",
+      "features": [
+        "Everything in Basic",
+        "Group fitness classes",
+        "Access from 5AM to 11PM",
+        "Discount on supplements"
+      ],
+      "isPopular": true
+    },
+    {
+      "id": 3,
+      "name": "Premium Plan",
+      "price": 70,
+      "description": "All-inclusive access with personal training and wellness support.",
+      "features": [
+        "Everything in Standard",
+        "1-on-1 personal training (4 sessions/month)",
+        "Sauna and steam room access",
+        "Nutrition consultation",
+        "Priority support"
+      ],
+      "isPopular": false
+    },
+    {
+      "id": 4,
+      "name": "Family Plan",
+      "price": 90,
+      "description": "Share the fitness journey with your family. Up to 4 members.",
+      "features": [
+        "All Premium benefits",
+        "Add up to 4 family members",
+        "Free kids play zone",
+        "Weekend family yoga"
+      ],
+      "isPopular": false
+    }
+  ]
+  

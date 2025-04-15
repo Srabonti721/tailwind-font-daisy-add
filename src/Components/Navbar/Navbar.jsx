@@ -30,7 +30,7 @@ const navigationData = [
 ];
 const Navbar = () => {
     const [open, setOpen] = useState(false);
-    const links = navigationData.map(route => <Link route={route}></Link>)
+    const links = navigationData.map(route => <Link key={route.id} route={route}></Link>)
 
     return (
 
