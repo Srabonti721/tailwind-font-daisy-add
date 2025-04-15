@@ -1,53 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from './link';
+import { Menu, X } from 'lucide-react';
 const navigationData = [
     {
-      id: 1,
-      name: "Home",
-      path: "/"
+        id: 1,
+        name: "Home",
+        path: "/"
     },
     {
-      id: 2,
-      name: "About",
-      path: "/about"
+        id: 2,
+        name: "About",
+        path: "/about"
     },
     {
-      id: 3,
-      name: "Services",
-      path: "/services"
+        id: 3,
+        name: "Services",
+        path: "/services"
     },
     {
-      id: 4,
-      name: "Blog",
-      path: "/blog"
+        id: 4,
+        name: "Blog",
+        path: "/blog"
     },
     {
-      id: 5,
-      name: "Contact",
-      path: "/contact"
+        id: 5,
+        name: "Contact",
+        path: "/contact"
     }
-  ];
+];
 const Navbar = () => {
-    
+    const [open, setOpen] = useState(false);
+    const links = navigationData.map(route => <Link route={route}></Link>)
+
     return (
 
-        <nav>
-<ul className='flex justify-center'>
-    {
-        navigationData.map(route=><Link route={route}></Link>)
-    }
+        <nav className='flex justify-between items-center bg-gray-300 mx-8 hover:bg-blue-50'>
+            <span className='flex' onClick={() => setOpen(!open)}>
+                {
+                    open ? <X className='md:hidden'></X> : <Menu className='md:hidden' ></Menu>
+                }
+<ul className='md:hidden'>
+{
+    links
+}
 </ul>
 
+                <h1 className=' ml-4 not-last:text-xl font-medium'>My Navbar</h1>
+            </span>
+
+            <ul className=' md:flex justify-center hidden'>
+                {
+                    links
+                }
+            </ul>
+            <button className='btn hover:bg-blue-500 bg-amber-500'>Sign In</button>
 
 
-  {/* <ul className='flex justify-center '>
+
+            {/* <ul className='flex justify-center '>
     {
       navigationData.map(link =><li className='mr-10'>
         <a href={link.path}></a>{link.name}
       </li> )  
     }
   </ul> */}
-   {/* <ul className='flex justify-center '>
+            {/* <ul className='flex justify-center '>
     <li className='mr-10'><a href="/"></a>Home</li>
     <li className='mr-10'><a href="/about"></a>About</li>
     <li className='mr-10'><a href="/blog"></a>Blog</li>
